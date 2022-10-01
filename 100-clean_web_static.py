@@ -3,7 +3,7 @@
 from fabric.api import *
 
 
-env.hosts = ['35.231.33.237', '34.74.155.163']
+env.hosts = ['3.91.63.125', '3.239.2.120']
 env.user = "ubuntu"
 
 
@@ -13,10 +13,10 @@ def do_clean(number=0):
     number = int(number)
 
     if number == 0:
-        number = 2
+        numbers = 1
     else:
-        number += 1
+        numbers = number
 
-    local('cd versions ; ls -t | tail -n +{} | xargs rm -rf'.format(number))
+    local('cd versions ; ls -t | head -n -{} | xargs rm -rf'.format(numbers))
     path = '/data/web_static/releases'
-    run('cd {} ; ls -t | tail -n +{} | xargs rm -rf'.format(path, number))
+    run('cd {} ; ls -t | head -n -{} | xargs rm -rf'.format(path, numbers))
