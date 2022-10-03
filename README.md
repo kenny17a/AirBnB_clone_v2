@@ -1,5 +1,5 @@
 # HBNB
-
+Awesome Project
 This is the console /command interpreter for the Holberton Airbnb clone project. The console can be used to store objects in and retrieve objects from a JSON.
 
 ### Supported classes:
@@ -51,4 +51,4 @@ Ex:
 
 Additionally, the console supports `<class name>.<command>(<parameters>)` syntax.
 Ex:
-`City.show(my_city_id)`
+`City.show(my_city_id)``"
